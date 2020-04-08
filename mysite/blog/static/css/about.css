@@ -1,0 +1,416 @@
+
+/* picture */
+.cont{
+margin-left: 650px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    padding: 0.75vw;
+
+    display: grid;
+    grid-template-columns: repeat(64, 1fr);
+    grid-template-rows: 55vh 30vh;
+    grid-row-gap: 0.75vw;
+}
+
+.box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:hover img {
+        opacity: 0.75;
+    }
+}
+
+.box__inner {
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+
+        object-position: 50% 50%;
+        object-fit: cover;
+
+        transition: opacity .2s ease-out;
+    }
+}
+
+.box--left {
+    clip-path: polygon(0 0, 98% 0, 83% 100%, 0 100%);
+    grid-row: 1;
+    grid-column: 1 / span 35;
+}
+
+.box--right {
+    clip-path: polygon(17% 0, 100% 0, 100% 100%, 2% 100%);
+    grid-row: 1;
+    grid-column: span 35 / -1;
+}
+
+.box--small {
+    grid-row: 2;
+
+    &.box--left {
+        clip-path: polygon(0 0, 83% 0, 98% 100%, 0 100%);
+    }
+
+    &.box--right {
+        clip-path: polygon(2% 0, 100% 0, 100% 100%, 17% 100%);
+    }
+}
+
+/* aboutme */
+body {
+
+    color: #222222;
+    margin: 0;
+
+}
+
+.masthead{
+  padding: 15em 0;
+  background-image: url("http://st.shopio.com/storefront/aa/3367/themes/beauty_shop_2015_01_01_01_56_59/images/intro-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+
+  border-top: solid 1em #000000;
+
+
+}
+.masthead-intro{
+  text-align: center;
+  margin-bottom: 0.1em;
+}
+.masthead-heading{
+  text-align: center;
+  margin-top: -0.2em;
+  font-size: 4em;
+
+}
+
+.header-divider{
+  max-width: 400px;
+  border-top: 1px solid;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.introduction-section,
+.location-section,
+.questions-section {
+  text-align: left;
+  margin-top: 2em;
+  max-width: 35em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+h2 {
+  text-align: left;
+  color: #686568;
+  margin-top: 1em;
+}
+
+h3 {
+
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+
+.mastfoot {
+
+
+  margin-top: 3em;
+  padding: 4em;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+  .masthead {
+    padding:  3em 0;
+  }
+  .masthead-heading {
+    font-size: 2em;
+  }
+ .introduction-section,
+  .questions-section,
+  .location-section {
+    margin: 10px;
+  }
+}
+
+.techfont{
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+
+.postdate{
+  text-align: center;
+}
+
+.posttitle{
+  font-family: 'Russo One', sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+
+.postcontent{
+  font-family: 'Montserrat';
+  font-size: 1.5em;
+}
+
+.centerstage{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-comment{
+  position: absolute;
+  right: 0px;
+}
+
+.bigbrand{
+  font-size: 1.5em;
+}
+p{
+	font-family: monospace;
+font-size: 1.5em;
+}
+
+section h1{	font-family: 'Russo One', sans-serif;
+font-size: 2.2em;}
+section h2{
+font-family: 'Russo One', sans-serif;
+	font-size: 1.8em;
+}
+/*COLOR CHANGER*/
+/*Credit and Source: http://codepen.io/thapliyalshivam/pen/dvgXVO*/
+.loader{
+  filter:hue-rotate(0deg);
+  color: linear-gradient(45deg,#0f8,#08f);
+  animation:hue 5000ms infinite linear;
+}
+
+@keyframes spinify {
+  0% {
+    transform: translate(0px,0px);
+
+  }
+  33% {
+    transform: translate(0px,24px);
+    border-radius:100%;
+    width:10px;
+    height:10px;
+
+  }
+   66% {
+    transform:translate(0px,-16px);
+  }
+
+   88% {
+    transform:translate(0px,4px);
+
+  }
+  100% {
+    transform:translate(0px,0px);
+  }
+}
+@keyframes hue{
+  0%{filter: hue-rotate(0deg);}
+  100%{filter:hue-rotate(360deg);}
+
+}
+
+/* footer */
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}

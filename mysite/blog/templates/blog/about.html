@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://kit.fontawesome.com/3b1225e6bb.js" crossorigin="anonymous"></script>
+
+    <link href="{%static 'css/all.css'%}" rel="stylesheet"> <!--load all styles -->
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+    <title>Blog Project</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+
+    {# MEDIUM STYLE EDITOR#}
+    <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+
+
+    {# Custom CSS#}
+
+    {# Fonts#}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
+
+  </head>
+
+    <body  class="loader">
+
+
+
+
+      <nav class="nav navbar-default techfont custom-navbar">
+        <div class="container">
+
+          <ul class="nav navbar-nav">
+            <li><a class='bigbrand' href="{% url 'post_list' %}">My blog</a></li>
+            <li><a href="{% url 'about'%}">About</a></li>
+            <li><a href="https://www.github.com">Github</a></li>
+            <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+            <li>
+              <a href="{% url 'post_new' %}" >New Post</a>
+            </li>
+
+            <li>
+              <a href="{% url 'post_draft_list' %}">Drafts</a>
+            </li>
+            <li>
+              <a href="{% url 'logout' %}" >Log out</a>
+            </li>
+
+            <li>
+              <a >Welcome: {{ user.username }}</a>
+            </li>
+              {% else %}
+              <li><a class='nav navbar-right' href="{% url 'login' %}" ><span class="glyphicon glyphicon-user"></span></a></li>
+            {% endif %}
+
+          </ul>
+      </div>
+    </nav>
+
+<header class="masthead">
+  <p class="masthead-intro">Hi, I'm</p>
+  <h1 class="masthead-heading">Amgad</h1>
+  <hr class="header-divider">
+</header>
+<section class="introduction-section">
+  <h1>Introduction</h1>
+  <p>I am Someone who is positive, honest and believes in integrity. Every day I work to improve myself and my skills to become better at what I do.</p>
+  <p>Family, honesty, integrity and faith are the most important to me.</p>
+</section>
+<section class="location-section">
+  <h1>Where I'm From</h1>
+  <p>I am from Egypt</p>
+</section>
+<section class="questions-section">
+  <h1>More About Me:</h1>
+  <h2>What are your favorite hobbies?</h2>
+  <p>My favourite hobbies are playing sports, hiking, Chess and traveling.</p>
+  <h2>What's your dream job?</h2>
+  <p>Freelance Web Developer</p>
+  <h2>What's your background</h2>
+  <p>Has extensive experience of C++ Programming, acquired from the academic sector,some experience in Data Science from the private sector.
+Furthermore has a strong interest and aptitude for web technologies.
+And here we are a Full-Stack Django Developer.</p>
+  <h2>What music have you been listening to lately.</h2>
+  <p>Lately I have been listening to Klergy,Cairokee band</p>
+</section>
+
+
+
+
+    <div class="row">
+        <div class="box box--left">
+            <div class="box__inner">
+                <a href="#">
+                    <img src="https://source.unsplash.com/random/1024x600" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="box box--right">
+            <div class="box__inner">
+                <a href="#">
+                    <img src="https://source.unsplash.com/random/1024x601" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="box box--left box--small">
+            <div class="box__inner">
+                <a href="#">
+                    <img src="https://source.unsplash.com/random/1024x602" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="box box--right box--small">
+            <div class="box__inner">
+                <a href="#">
+                    <img src="https://source.unsplash.com/random/1024x603" alt="">
+                </a>
+            </div>
+</div>
+</div>
+<!-- Site footer -->
+<footer class="site-footer">
+<div class="cont">
+<div class="row">
+
+
+<div class="col-xs-6 col-md-3">
+<h6>Categories</h6>
+<ul class="footer-links">
+  <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+  <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+  <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+  <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+  <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+  <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+</ul>
+</div>
+
+<div class="col-xs-6 col-md-3">
+<h6>Quick Links</h6>
+<ul class="footer-links">
+  <li><a href="http://scanfcode.com/about/">About Us</a></li>
+  <li><a href="tel:+201123599818">Contact Us</a></li>
+  <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+  <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+  <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+</ul>
+</div>
+<div class="col-md-4 col-sm-6 col-xs-12">
+<ul class="social-icons">
+  <li><a class="facebook" href="https://www.facebook.com/Amgad.Mourad20/"><i class="fab fa-facebook-f pr-1"></i></a></li>
+  <li><a class="twitter" href="https://twitter.com/amgad_mourad"><i class="fa fa-twitter"></i></a></li>
+  <li><a class="Google" href="https://www.google.com/"><i class="fab fa-google"></i></a></li>
+  <li><a class="linkedin" href="https://www.linkedin.com/in/amgad-mohamed-6550bb177/"><i class="fa fa-linkedin"></i></a></li>
+</ul>
+</div>
+</div>
+<hr>
+</div>
+
+
+
+
+
+
+</footer>
+    <script type="text/javascript" src="{% static 'js/about.js' %}"></script>
+  </body>
+
+</html>
